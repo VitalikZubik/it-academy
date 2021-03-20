@@ -321,8 +321,20 @@ btnResultUpCase.addEventListener('click', capitalizeFirstCharacter);
 
 // 4. Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') 
 // не используя цикл.
+const inputReverse = document.getElementById('20'),
+      pReverse = document.getElementById('21'),
+      btnResultReverse = document.getElementById('22');
 
+let strReverse = '';
 
+const reverseStr = () => {
+    strReverse = strReverse.split('').reverse().join('');
+
+    pReverse.innerHTML = `Результат: ${strReverse}`;
+}
+
+inputReverse.addEventListener('input', () => {strReverse = inputReverse.value});
+btnResultReverse.addEventListener('click', reverseStr)
 // 5. Найдите квадратный корень из 587. Округлите результат в большую и меньшую стороны, 
 // запишите результаты округления в объект с ключами 'floor' и 'ceil'.
 
