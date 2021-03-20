@@ -275,15 +275,15 @@ const resultCompare = () => {
     compareArrays(arrA,arrB);
     
     if(resultCompareArrays) {
-        pCompareResult.innerHTML = 'Массивы 1 и 2 равны.'
+        pCompareResult.innerHTML = 'Результат: Массивы 1 и 2 равны.';
     } else {
-        pCompareResult.innerHTML = 'Массивы 1 и 2 не равны.'
+        pCompareResult.innerHTML = 'Результат: Массивы 1 и 2 не равны.';
     }
 }
 inputArr1.addEventListener('input', () => {arrA = inputArr1.value.toLowerCase().split(', ')});
 inputArr2.addEventListener('input', () => {arrB = inputArr2.value.toLowerCase().split(', ')});
 
-btnResultCompare.addEventListener('click', resultCompare)
+btnResultCompare.addEventListener('click', resultCompare);
 
 
 // 2. Вывести уникальные эелементы (цикл в цикле) и (используя {} (Map или HashMap)) 
@@ -295,9 +295,33 @@ btnResultCompare.addEventListener('click', resultCompare)
 
 // 3. Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. 
 // Найдите два решения.
+const inputStr = document.getElementById('16'),
+      pSolution1 = document.getElementById('17'),
+      pSolution2 = document.getElementById('18'),
+      btnResultUpCase = document.getElementById('19');
+
+let solution1 = '',
+    solution2 = '',
+    str = '';
+
+const capitalizeFirstCharacter = () => {
+    solution1 = str[0].toUpperCase() + str.slice(1);
+
+    solution2 = str.split('');
+    solution2[0] = solution2[0].toUpperCase();
+    solution2 = solution2.join('');
+
+    pSolution1.innerHTML = `Решение 1: ${solution1}`;
+    pSolution2.innerHTML = `Решение 2: ${solution2}`;
+}
+
+inputStr.addEventListener('input', () => {str = inputStr.value});
+btnResultUpCase.addEventListener('click', capitalizeFirstCharacter);
+
 
 // 4. Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') 
 // не используя цикл.
+
 
 // 5. Найдите квадратный корень из 587. Округлите результат в большую и меньшую стороны, 
 // запишите результаты округления в объект с ключами 'floor' и 'ceil'.
