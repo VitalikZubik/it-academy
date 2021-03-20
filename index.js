@@ -334,9 +334,27 @@ const reverseStr = () => {
 }
 
 inputReverse.addEventListener('input', () => {strReverse = inputReverse.value});
-btnResultReverse.addEventListener('click', reverseStr)
+btnResultReverse.addEventListener('click', reverseStr);
+
 // 5. Найдите квадратный корень из 587. Округлите результат в большую и меньшую стороны, 
 // запишите результаты округления в объект с ключами 'floor' и 'ceil'.
+const pFloor = document.getElementById('23'),
+      pCeil = document.getElementById('24'),
+      btnResultSqrt = document.getElementById('25');
+
+const myObj = {},
+      number = 587;
+
+
+const getSqrt = () => {
+    myObj.floor = Math.floor(Math.sqrt(number));
+    myObj.ceil = Math.ceil(Math.sqrt(number));
+
+    pFloor.innerHTML = `Floor: ${myObj.floor}`;
+    pCeil.innerHTML = `Ceil: ${myObj.ceil}`;
+}
+
+btnResultSqrt.addEventListener('click', getSqrt)
 
 // 6. Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число 
 // (Math.min, Math.max).
