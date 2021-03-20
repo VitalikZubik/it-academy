@@ -358,6 +358,24 @@ btnResultSqrt.addEventListener('click', getSqrt)
 
 // 6. Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число 
 // (Math.min, Math.max).
+const pMin = document.getElementById('26'),
+      pMax = document.getElementById('27'),
+      btnResultMinMax = document.getElementById('28');
+      
+const myArrNum = [4, -2, 5, 19, -130, 0, 10];
+
+let min = 0,
+    max = 0;
+
+const getMinMaxNum = () => {
+    min = Math.min(...myArrNum);
+    max = Math.max(...myArrNum);
+
+    pMin.innerHTML = `Min: ${min}`;
+    pMax.innerHTML = `Max: ${max}`;    
+}
+
+btnResultMinMax.addEventListener('click', getMinMaxNum);
 
 // 7. Заполните массив 10-ю случайными целыми числами. Посчитайте их сумму с помощью reduce, 
 // создайте новый массив в котором будут квадраты этих чисел, используя map, 
