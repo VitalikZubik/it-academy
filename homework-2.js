@@ -219,9 +219,22 @@ const onResultJQuery = () => {
     pResultJQuery.innerHTML = myObject.js[0];
 }
 
-btnResultJQuery.addEventListener('click', onResultJQuery)
+btnResultJQuery.addEventListener('click', onResultJQuery);
 
 // 9. Создайте двухмерный массив. Первые два ключа - это 'ru' и 'en'. 
 // Пусть первый ключ содержит элемент, являющийся массивом названий дней недели по-русски, 
 // а второй - по-английски. Выведите с помощью этого массива понедельник по-русски и 
 // среду по английски (пусть понедельник - это нулевой день).
+const pResultDay = document.getElementById('41'),
+      btnResultDay = document.getElementById('42');
+
+const myArr = [
+    {ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']},
+    {en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']}
+];
+
+const onGetDays = () => {
+    pResultDay.innerHTML = `ru: ${myArr[0].ru[0]}, en: ${myArr[1].en[2]}`;
+}
+
+btnResultDay.addEventListener('click', onGetDays);
