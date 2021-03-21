@@ -48,6 +48,35 @@ btnResultCompare.addEventListener('click', resultCompare);
 // использовать for, forEach, reduce 
 // const myArray1 = [55,77,66];
 // const myArray2 = [55,11,15,77,66,99,100,110];
+const pUnique = document.getElementById('43'),
+      btnResultUnique = document.getElementById('44');
+
+const myArray1 = [55,77,66];
+const myArray2 = [55,11,15,77,66,99,100,110];
+let uniqueValues;
+const getUniqueValues = () => {
+    // for (let i = 0; i < myArray1.length; i++){
+    //     for (let j = 0; j < myArray2.length; j++) {
+    //         if (myArray1[i] === myArray2[j]) {
+    //             myArray2.splice(myArray2.indexOf(myArray2[j]), 1);
+    //         }
+    //     }
+    // }
+    
+    // pUnique.innerHTML = myArray2;
+
+    uniqueValues = myArray2.reduce((map, item)=>{
+        if(!myArray1.includes(item)) {
+            map[item] = true;
+            return map;
+        } else {
+            return map;
+        }
+    },{});
+
+    pUnique.innerHTML = Object.keys(uniqueValues);
+}
+btnResultUnique.addEventListener('click', getUniqueValues);
 
 
 // 3. Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. 
