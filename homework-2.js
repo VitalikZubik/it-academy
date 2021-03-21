@@ -204,12 +204,22 @@ const onSortNum = () => {
 
 btnResultSortNum.addEventListener('click', onSortNum);
 
-console.log(arrayRandomNums);
-console.log(sumArrayNums);
-console.log(sqrtArrayRandomNums);
-
 // 8. Дан объект {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}. 
 // Выведите с его помощью слово 'jQuery'.
+const pResultJQuery = document.getElementById('39'),
+      btnResultJQuery = document.getElementById('40');
+
+const myObject = {
+    js:['jQuery', 'Angular'], 
+    php: 'hello', 
+    css: 'world'
+}
+
+const onResultJQuery = () => {
+    pResultJQuery.innerHTML = myObject.js[0];
+}
+
+btnResultJQuery.addEventListener('click', onResultJQuery)
 
 // 9. Создайте двухмерный массив. Первые два ключа - это 'ru' и 'en'. 
 // Пусть первый ключ содержит элемент, являющийся массивом названий дней недели по-русски, 
