@@ -1,14 +1,18 @@
 const btnRef1 = document.querySelector('.homework_1'),
       btnRef2 = document.querySelector('.homework_2'),
+      btnRef3 = document.querySelector('.homework_3'),
       wraperHomework1 = document.querySelector('.wraper_homework_1'),
-      wraperHomework2 = document.querySelector('.wraper_homework_2');
+      wraperHomework2 = document.querySelector('.wraper_homework_2'),
+      wraperHomework3 = document.querySelector('.wraper_homework_3');
 
 btnRef1.addEventListener('click', () => {
     if(wraperHomework1.classList.contains('not_active_homework')) {
         wraperHomework1.classList.remove('not_active_homework');
         wraperHomework2.classList.add('not_active_homework');
+        wraperHomework3.classList.add('not_active_homework');
         btnRef1.classList.add('active_ref');
         btnRef2.classList.remove('active_ref');
+        btnRef3.classList.remove('active_ref');
     } else {
         return
     }
@@ -18,7 +22,22 @@ btnRef2.addEventListener('click', () => {
     if(wraperHomework2.classList.contains('not_active_homework')) {
         wraperHomework2.classList.remove('not_active_homework');
         wraperHomework1.classList.add('not_active_homework');
+        wraperHomework3.classList.add('not_active_homework');
         btnRef2.classList.add('active_ref');
+        btnRef1.classList.remove('active_ref'); 
+        btnRef3.classList.remove('active_ref'); 
+    } else {
+        return
+    }
+});
+
+btnRef3.addEventListener('click', () => {
+    if(wraperHomework3.classList.contains('not_active_homework')) {
+        wraperHomework3.classList.remove('not_active_homework');
+        wraperHomework1.classList.add('not_active_homework');
+        wraperHomework2.classList.add('not_active_homework');
+        btnRef3.classList.add('active_ref');
+        btnRef2.classList.remove('active_ref'); 
         btnRef1.classList.remove('active_ref'); 
     } else {
         return
