@@ -68,5 +68,36 @@ inputStr2Anagram.addEventListener('input', () => {str2 = inputStr2Anagram.value}
 
 btnAnagram.addEventListener('click', anagram);
 
+// 4. Нужно написать функцию, которая возвращает n-ную запись в определенной последовательности
+//  Фибонначи, причем n — число, которое передается в качестве аргумента функции.
+const inputFibonacci = document.getElementById('55'),
+      pFibonacci = document.getElementById('56'),
+      btnFibonacci = document.getElementById('57');
+let numFibonacci;
 
+const fibonacci = () => {
+    const result = [0, 1];
+
+    for (let i = 2; i <= numFibonacci; i++) {
+        const prevNum1 = result[i - 1];
+        const prevNum2 = result[i - 2];
+        result.push(prevNum1 + prevNum2);
+    }
+
+    pFibonacci.innerHTML = result[numFibonacci];
+}
+
+inputFibonacci.addEventListener('input', () => {numFibonacci = inputFibonacci.value});
+btnFibonacci.addEventListener('click', fibonacci);
+
+// 5.Реализуйте класс Student (Студент), который будет наследовать от класса User, 
+// подобно тому, как это сделано в теоретической части урока. 
+// Этот класс должен иметь следующие свойства: name (имя, наследуется от User), 
+// surname (фамилия, наследуется от User), year (год поступления в вуз). 
+// Класс должен иметь метод getFullName() (наследуется от User), 
+// с помощью которого можно вывести одновременно имя и фамилию студента. 
+// Также класс должен иметь метод getCourse(), 
+// который будет выводить текущий курс студента (от 1 до 5). 
+// Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. 
+// Текущий год получите самостоятельно.
 
