@@ -47,4 +47,26 @@ const fizzBuzz = () => {
 inputFizzBuzz.addEventListener('input', () => { numFizzBuzz = inputFizzBuzz.value});
 btnFizzBuzz.addEventListener('click', fizzBuzz);
 
-// 3.
+// 3.Нужно написать функцию, которая проверяет, являются ли две строки анаграммами, 
+// причем регистр букв не имеет значения. Учитываются лишь символы; 
+// пробелы или знаки препинания в расчет не берутся.
+
+const inputStr1Anagram = document.getElementById('51'),
+      inputStr2Anagram = document.getElementById('52'),
+      pAnagram = document.getElementById('53'),
+      btnAnagram = document.getElementById('54');
+
+let str1 = '',
+    str2 = '';
+
+const anagram = () => {
+    pAnagram.innerHTML = [...str1.toLowerCase()].sort().join('') === [...str2.toLowerCase()].sort().join('');
+};
+
+inputStr1Anagram.addEventListener('input', () => {str1 = inputStr1Anagram.value});
+inputStr2Anagram.addEventListener('input', () => {str2 = inputStr2Anagram.value});
+
+btnAnagram.addEventListener('click', anagram);
+
+
+
