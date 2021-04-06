@@ -101,3 +101,39 @@ btnFibonacci.addEventListener('click', fibonacci);
 // Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. 
 // Текущий год получите самостоятельно.
 
+class User {
+    constructor (name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    getFullName () {
+        return `${this.name} ${this.surname}`;
+    }
+}
+
+class Student extends User {
+    constructor (name, surname, year) {
+        super(name, surname);
+        this.year = year;
+    }
+
+    getCourse () {
+        const currentYear = new Date().getFullYear();
+        const currentCourse = currentYear - this.year;
+
+        if (currentCourse === 0) {
+            return currentCourse + 1;
+        } else if (currentCourse <= 5) {
+            return currentCourse;
+        } else if (currentCourse > 5) {
+            const graduation = this.year + 5;
+            return `graduate of ${graduation}`;
+        }
+    }
+}
+
+const student = new Student('Иван', 'Иванов', 2020);
+
+console.log(student.getFullName());
+console.log(student.getCourse());
