@@ -101,6 +101,43 @@ btnFibonacci.addEventListener('click', fibonacci);
 // Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. 
 // Текущий год получите самостоятельно.
 
+// function User (name, surname) {
+//     this.name = name;
+//     this.surname = surname;
+// }
+
+// User.prototype.getFullName = function () {
+//     return this.name + ' ' + this.surname;
+// }
+
+// function Student (name, surname, year) {
+//     User.apply(this, arguments);
+//     this.year = year;
+// }
+
+// Student.prototype = Object.create(User.prototype);
+
+// Student.prototype.getCourse = function () {
+//     var currentYear = new Date().getFullYear();
+//     var currentCourse = currentYear - this.year;
+
+//     if (currentCourse === 0) {
+//         return currentCourse + 1;
+//     } else if (currentCourse <= 5) {
+//         return currentCourse;
+//     } else if (currentCourse > 5) {
+//         var graduation = this.year + 5;
+//         return 'graduate of ' + graduation;
+//     }
+// }
+
+
+
+// var ivan = new Student('Ivan', 'Ivanov', 2013);
+// console.log(ivan.getFullName());
+// console.log(ivan.getCourse());
+
+
 class User {
     constructor (name, surname) {
         this.name = name;
@@ -133,7 +170,7 @@ class Student extends User {
     }
 }
 
-const student = new Student('Иван', 'Иванов', 2020);
+const ivan = new Student('Ivan', 'Ivanov', 2017);
 
-console.log(student.getFullName());
-console.log(student.getCourse());
+console.log(ivan.getFullName());
+console.log(ivan.getCourse());
