@@ -1,18 +1,22 @@
 const btnRef1 = document.querySelector('.homework_1'),
       btnRef2 = document.querySelector('.homework_2'),
       btnRef3 = document.querySelector('.homework_3'),
+      btnRef4 = document.querySelector('.homework_4'),
       wraperHomework1 = document.querySelector('.wraper_homework_1'),
       wraperHomework2 = document.querySelector('.wraper_homework_2'),
-      wraperHomework3 = document.querySelector('.wraper_homework_3');
+      wraperHomework3 = document.querySelector('.wraper_homework_3'),
+      wraperHomework4 = document.querySelector('.wraper_homework_4');
 
 btnRef1.addEventListener('click', () => {
     if(wraperHomework1.classList.contains('not_active_homework')) {
         wraperHomework1.classList.remove('not_active_homework');
         wraperHomework2.classList.add('not_active_homework');
         wraperHomework3.classList.add('not_active_homework');
+        wraperHomework4.classList.add('not_active_homework');
         btnRef1.classList.add('active_ref');
         btnRef2.classList.remove('active_ref');
         btnRef3.classList.remove('active_ref');
+        btnRef4.classList.remove('active_ref');
     } else {
         return
     }
@@ -20,12 +24,14 @@ btnRef1.addEventListener('click', () => {
 
 btnRef2.addEventListener('click', () => {
     if(wraperHomework2.classList.contains('not_active_homework')) {
-        wraperHomework2.classList.remove('not_active_homework');
         wraperHomework1.classList.add('not_active_homework');
+        wraperHomework2.classList.remove('not_active_homework');
         wraperHomework3.classList.add('not_active_homework');
-        btnRef2.classList.add('active_ref');
+        wraperHomework4.classList.add('not_active_homework');
         btnRef1.classList.remove('active_ref'); 
+        btnRef2.classList.add('active_ref');
         btnRef3.classList.remove('active_ref'); 
+        btnRef4.classList.remove('active_ref'); 
     } else {
         return
     }
@@ -33,12 +39,29 @@ btnRef2.addEventListener('click', () => {
 
 btnRef3.addEventListener('click', () => {
     if(wraperHomework3.classList.contains('not_active_homework')) {
-        wraperHomework3.classList.remove('not_active_homework');
         wraperHomework1.classList.add('not_active_homework');
         wraperHomework2.classList.add('not_active_homework');
-        btnRef3.classList.add('active_ref');
-        btnRef2.classList.remove('active_ref'); 
+        wraperHomework3.classList.remove('not_active_homework');
+        wraperHomework4.classList.add('not_active_homework');
         btnRef1.classList.remove('active_ref'); 
+        btnRef2.classList.remove('active_ref'); 
+        btnRef3.classList.add('active_ref');
+        btnRef4.classList.remove('active_ref'); 
+    } else {
+        return
+    }
+});
+
+btnRef4.addEventListener('click', () => {
+    if(wraperHomework4.classList.contains('not_active_homework')) {
+        wraperHomework1.classList.add('not_active_homework');
+        wraperHomework2.classList.add('not_active_homework');
+        wraperHomework3.classList.add('not_active_homework');
+        wraperHomework4.classList.remove('not_active_homework');
+        btnRef1.classList.remove('active_ref'); 
+        btnRef2.classList.remove('active_ref'); 
+        btnRef3.classList.remove('active_ref');
+        btnRef4.classList.add('active_ref'); 
     } else {
         return
     }

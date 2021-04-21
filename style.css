@@ -29,7 +29,8 @@ button {
 
 .wraper_homework_1,
 .wraper_homework_2,
-.wraper_homework_3 {
+.wraper_homework_3, 
+.wraper_homework_4 {
     display: grid;
     grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
     grid-template-rows: repeat(5, 1fr);
