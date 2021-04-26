@@ -25,9 +25,12 @@
             <div>
                 <button type="button" class="homework_4">Домашнее задание 4.</button>
             </div>
+            <div>
+                <button type="button" class="homework_5">Домашнее задание 5.</button>
+            </div>
         </div>
 
-        <div class="wraper_homework_1">
+        <div class="wraper_homework_1 not_active_homework">
             <div class="grid_item_1 item">
                 <h2>Задание 1.</h2>
                 <div>
@@ -233,11 +236,36 @@
                 <button class="btn_table">Показать таблицу</button>
             </div>
         </div>
+        <div class="wraper_homework_5">
+            <div class="grid_item_1 item item_homework_5">
+                <h2>Задание 1.</h2>
+                <p>Сделать сайт, 
+                    Кнопки: сделать текст большим, сделать текст зачеркнутым, сделать текст наклонённым, поле ввода для текста. Когда пользователь вводит текст, текст должен появится внизу поля ввода после нажатия на одну из кнопок с применённым стилем. Стили могут применяться друг за другом. Повторное нажатие на кнопку, отменяет стиль. Добавить два поля ввода: копировать с и копировать по. И кнопку копировать. По нажатию на кнопку происходит копирование части текста, указанной в диапазоне. Текст копируется с применёнными стилями и отображается рядом. 
+                    <br>
+                    Добавить валидацию на диапазон копирования, добавить валидацию на поле ввода текста</p>
+                <div class="homework_5_btn">
+                    <button class="homework_btn_1">сделать текст большим</button>
+                    <button class="homework_btn_2">сделать текст зачеркнутым</button>
+                    <button class="homework_btn_3">сделать текст наклонённым</button>
+                    <button class="homework_btn_4">копировать</button>
+                </div>
+                <div class="homework_5_input">
+                    <input class="value_1" placeholder="введите текст" type="text">
+                    <input class="value_2" placeholder="копировать с" type="text">
+                    <input class="value_3" placeholder="копировать по" type="text">
+                </div>
+                <div class="homework_5_text">
+                    <p class="result_value_1">123</p>
+                    <p class="result_copy_value">234</p>
+                </div>                
+            </div>
+        </div>
     </div>
     <script src="./homework-1.js"></script>
     <script src="./homework-2.js"></script>
     <script src="./homework-3.js"></script>
     <script src="./homework-4.js"></script>
+    <script src="./homework-5.js"></script>
 </body>
 
 </html>

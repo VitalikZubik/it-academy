@@ -30,11 +30,16 @@ button {
 .wraper_homework_1,
 .wraper_homework_2,
 .wraper_homework_3, 
-.wraper_homework_4 {
+.wraper_homework_4, 
+.wraper_homework_5 {
     display: grid;
     grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
     grid-template-rows: repeat(5, 1fr);
     gap: 20px;
+}
+
+.wraper_homework_5 .item_homework_5 {
+    grid-column: 1/4;
 }
 
 .not_active_homework{    
@@ -58,6 +63,7 @@ button {
 .side_bar button:hover {
     outline: solid 2px blue;
 }
+
 .item {
     display: grid;
     border: 1px solid black;
@@ -164,4 +170,39 @@ tbody td {
     text-align: center;
     padding: 0 5px;
     margin: 2px;
+}
+
+.homework_5_btn > button {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 10px 0 0;
+}
+
+.homework_5_input > input {
+    width: 200px;  
+    height: 30px;
+    margin: 10px 10px 0 0;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.homework_5_text {
+    height: 80px;
+}
+
+.homework_5_text > p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 5px;
+}
+
+.crossedOut {
+    text-decoration: line-through;
+}
+
+.italic {
+    font-style: italic;
 }

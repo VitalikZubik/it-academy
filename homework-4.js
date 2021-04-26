@@ -17,7 +17,7 @@ const sum = (a) => {
 }
 
 
-const resultSum = sum(1)(2)(3)(4)(5);
+const resultSum = sum(1)(2)(3);
 
 divSum.append(resultSum);
 
