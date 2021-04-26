@@ -28,12 +28,24 @@ const onClickBigText = () => {
         value_1 = value_1.toUpperCase();
         resultValue.classList.add('big');
         resultValueCopy.classList.add('big');
+
+        if (valueCopy) {
+            valueCopy = valueCopy.toUpperCase();
+            resultValueCopy.innerHTML = valueCopy;
+        }
+
         resultValue.innerHTML = value_1;
 
     } else if (value_1 && resultValue.classList.contains('big')) {
         value_1 = value_1.toLowerCase();
         resultValue.classList.remove('big');
         resultValueCopy.classList.remove('big');
+
+        if (valueCopy) {
+            valueCopy = valueCopy.toLowerCase();
+            resultValueCopy.innerHTML = valueCopy;
+        }
+
         resultValue.innerHTML = value_1;
     }
 }

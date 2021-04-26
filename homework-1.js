@@ -2,10 +2,12 @@ const btnRef1 = document.querySelector('.homework_1'),
       btnRef2 = document.querySelector('.homework_2'),
       btnRef3 = document.querySelector('.homework_3'),
       btnRef4 = document.querySelector('.homework_4'),
+      btnRef5 = document.querySelector('.homework_5'),
       wraperHomework1 = document.querySelector('.wraper_homework_1'),
       wraperHomework2 = document.querySelector('.wraper_homework_2'),
       wraperHomework3 = document.querySelector('.wraper_homework_3'),
-      wraperHomework4 = document.querySelector('.wraper_homework_4');
+      wraperHomework4 = document.querySelector('.wraper_homework_4'),
+      wraperHomework5 = document.querySelector('.wraper_homework_5');
 
 btnRef1.addEventListener('click', () => {
     if(wraperHomework1.classList.contains('not_active_homework')) {
@@ -13,10 +15,12 @@ btnRef1.addEventListener('click', () => {
         wraperHomework2.classList.add('not_active_homework');
         wraperHomework3.classList.add('not_active_homework');
         wraperHomework4.classList.add('not_active_homework');
+        wraperHomework5.classList.add('not_active_homework');
         btnRef1.classList.add('active_ref');
         btnRef2.classList.remove('active_ref');
         btnRef3.classList.remove('active_ref');
         btnRef4.classList.remove('active_ref');
+        btnRef5.classList.remove('active_ref');
     } else {
         return
     }
@@ -28,10 +32,12 @@ btnRef2.addEventListener('click', () => {
         wraperHomework2.classList.remove('not_active_homework');
         wraperHomework3.classList.add('not_active_homework');
         wraperHomework4.classList.add('not_active_homework');
+        wraperHomework5.classList.add('not_active_homework');
         btnRef1.classList.remove('active_ref'); 
         btnRef2.classList.add('active_ref');
         btnRef3.classList.remove('active_ref'); 
         btnRef4.classList.remove('active_ref'); 
+        btnRef5.classList.remove('active_ref'); 
     } else {
         return
     }
@@ -43,10 +49,12 @@ btnRef3.addEventListener('click', () => {
         wraperHomework2.classList.add('not_active_homework');
         wraperHomework3.classList.remove('not_active_homework');
         wraperHomework4.classList.add('not_active_homework');
+        wraperHomework5.classList.add('not_active_homework');
         btnRef1.classList.remove('active_ref'); 
         btnRef2.classList.remove('active_ref'); 
         btnRef3.classList.add('active_ref');
         btnRef4.classList.remove('active_ref'); 
+        btnRef5.classList.remove('active_ref'); 
     } else {
         return
     }
@@ -58,14 +66,34 @@ btnRef4.addEventListener('click', () => {
         wraperHomework2.classList.add('not_active_homework');
         wraperHomework3.classList.add('not_active_homework');
         wraperHomework4.classList.remove('not_active_homework');
+        wraperHomework5.classList.add('not_active_homework');
         btnRef1.classList.remove('active_ref'); 
         btnRef2.classList.remove('active_ref'); 
         btnRef3.classList.remove('active_ref');
         btnRef4.classList.add('active_ref'); 
+        btnRef5.classList.remove('active_ref'); 
     } else {
         return
     }
 });
+
+btnRef5.addEventListener('click', () => {
+    if(wraperHomework5.classList.contains('not_active_homework')) {
+        wraperHomework1.classList.add('not_active_homework');
+        wraperHomework2.classList.add('not_active_homework');
+        wraperHomework3.classList.add('not_active_homework');
+        wraperHomework4.classList.add('not_active_homework');
+        wraperHomework5.classList.remove('not_active_homework');
+        btnRef1.classList.remove('active_ref'); 
+        btnRef2.classList.remove('active_ref'); 
+        btnRef3.classList.remove('active_ref');
+        btnRef4.classList.remove('active_ref'); 
+        btnRef5.classList.add('active_ref'); 
+    } else {
+        return
+    }
+});
+
                 //  HOMEWORK - 1
 // 1. Даны кнопки. Привяжите к каждой кнопке событие по клику, 
 // которое будет считать количество нажатий по кнопке и выводить его в текст кнопки.
